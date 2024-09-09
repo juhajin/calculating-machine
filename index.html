@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴판</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>소곡주 오프라인 판매가</h1>
+        <div class="menu-section">
+            <h2>제품명</h2>
+            <div class="menu-item" onclick="addToTotal(55000, '어주세트')">
+                <span class="item-name">어주세트(700ml*2) (18%)</span>
+                <span class="item-price">₩55,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(45000, '금장 호랑이')">
+                <span class="item-name">금장 호랑이(700ml)(18%)</span>
+                <span class="item-price">₩45,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(30000, '신어주')">
+                <span class="item-name">신어주(700ml)(18%)</span>
+                <span class="item-price">₩30,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(90000, '명화 1호')">
+                <span class="item-name">명화1호(1,000ml)(18%)</span>
+                <span class="item-price">₩90,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(32000, '백제1호')">
+                <span class="item-name">백제1호(700ml*2)(13%)</span>
+                <span class="item-price">₩32,000</span>
+            </div>
+            <br></br>
+            <div class="menu-item" onclick="addToTotal(25000, '대병')">
+                <span class="item-name">1.8L-대병(1,800ml)(18%)</span>
+                <span class="item-price">₩25,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(13000, '700')">
+                <span class="item-name">700ml(700ml)(18%)</span>
+                <span class="item-price">₩13,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(8000, '360')">
+                <span class="item-name">360ml(360ml)(18%)</span>
+                <span class="item-price">₩8,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(65000, '사군자')">
+                <span class="item-name">사군자(500ml*2)(18%)</span>
+                <span class="item-price">₩65,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(25000, '천상문')">
+                <span class="item-name">천상문(500ml)(18%)</span>
+                <span class="item-price">₩25,000</span>
+            </div>
+            <br></br>
+            <div class="menu-item" onclick="addToTotal(50000, '불어주')">
+                <span class="item-name">불어주(700ml)(43%)</span>
+                <span class="item-price">₩50,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(30000, '불700')">
+                <span class="item-name">불소곡주(700ml)(43%)</span>
+                <span class="item-price">₩30,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(40000, '불천상문')">
+                <span class="item-name">불천상문(400ml)(43%)</span>
+                <span class="item-price">₩40,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(170000, '오크프리미엄')">
+                <span class="item-name">오크프리미엄(700ml)(43%)</span>
+                <span class="item-price">₩170,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(49000, '오크블루')">
+                <span class="item-name">오크블루(500ml)(43%)</span>
+                <span class="item-price">₩49,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(79000, '오크세트')">
+                <span class="item-name">오크세트(500ml*2)(43%)</span>
+                <span class="item-price">₩79,000</span>
+            </div>
+            <div class="menu-item" onclick="addToTotal(140000, '진사당초')">
+                <span class="item-name">진사당초(1,000ml)(43%)</span>
+                <span class="item-price">₩140,000</span>
+            </div>
+        </div>
+
+        <div class="total-section">
+            <h2>총 합계</h2>
+            <div id="total">₩0</div>
+            <button onclick="resetTotal()" class="reset-button">지우기</button>
+            <button onclick="showLog()" class="log-button">로그 보기</button>
+        </div>
+    </div>
+
+        <div>
+            <div id="log-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLog()">&times;</span>
+                <h2>선택한 메뉴 로그</h2>
+                <ul id="log-list"></ul>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
